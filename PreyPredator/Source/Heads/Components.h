@@ -108,11 +108,8 @@ public:
 
 struct SensingComponent {
 	float RadiusSquare = 100.0;
-	float ViewAngle = 100.0f;
 	std::vector<unsigned int> HeardEntities;
 	std::vector<unsigned int> SeenEntities;
-
-
 };
 
 struct AIComponent {

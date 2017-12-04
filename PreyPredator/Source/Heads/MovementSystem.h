@@ -16,8 +16,6 @@ public:
 
 	void UpdatePosition(EntityManager * entitymanager, unsigned int entity);
 
-	
-
 	void UpdateVelocity(EntityManager * entitymanager, unsigned int entity);
 
 	void SimpleMoveTo(EntityManager * entitymanager, unsigned int entity, vmath::vec3 Target);

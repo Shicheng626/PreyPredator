@@ -8,7 +8,7 @@ void SensingSystem::Update(EntityManager * entitymanager)
 			entitymanager->SensingList[entity]->HeardEntities.clear();
 			entitymanager->SensingList[entity]->SeenEntities.clear();
 			UpdateHeardList(entitymanager, entity);
-			UpdateSawList(entitymanager, entity);
+			UpdateSeenList(entitymanager, entity);
 		
 		}
 	}
@@ -29,7 +29,7 @@ void SensingSystem::UpdateHeardList(EntityManager * entitymanager, unsigned int 
 	}
 }
 
-void SensingSystem::UpdateSawList(EntityManager * entitymanager, unsigned int entity)
+void SensingSystem::UpdateSeenList(EntityManager * entitymanager, unsigned int entity)
 {
 	if (entitymanager->SensingList[entity]->HeardEntities.size() > 0) {
 		for (int i = 0; i < entitymanager->SensingList[entity]->HeardEntities.size(); i++) {

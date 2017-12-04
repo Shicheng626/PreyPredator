@@ -68,26 +68,12 @@ bool AISystem::IsSeen(EntityManager * entitymanager, unsigned int entity, unsign
 
 void AISystem::Update(EntityManager * entitymanager)
 {
-
-	for (int i = 0; i < entitymanager->AIList.size(); i++) {
-		//if (blockCount <= 100) {
-			if (entitymanager->AIList[i] != nullptr) {
-				//	ClearCheckedEntities(entitymanager, i);
-		//			UpdateFocus(entitymanager, i);
-				UpdateStatus(entitymanager, i);
-				UpdateAction(entitymanager, i);
-
-			}
-	//	}
-	//	else {
-		//	entitymanager->AIList[i]->status = AIComponent::Idle;
-		//	entitymanager->MovementList[i]->PathToTarget.clear();
-		//	entitymanager->MovementList[i]->DoPathFinding = true;
-		//	blockCount = 0;
-	//	}
+	for (int entity = 0; entity < entitymanager->AIList.size(); entity++) {
+		if (entitymanager->AIList[entity] != nullptr) {
+			UpdateStatus(entitymanager, entity);
+			UpdateAction(entitymanager, entity);
+		}
 	}
-
-	//blockCount++;
 }
 
 void AISystem::UpdateStatus(EntityManager * entitymanager, unsigned int entity)
